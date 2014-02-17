@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CC8332618A5979800CB9E6A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8332518A5979800CB9E6A /* main.c */; };
 		3CC8332818A5979800CB9E6A /* test_srp.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CC8332718A5979800CB9E6A /* test_srp.1 */; };
+		3CC8333618A597D100CB9E6A /* srp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8333118A597D100CB9E6A /* srp.c */; };
+		3CC8333718A597D100CB9E6A /* test_srp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8333318A597D100CB9E6A /* test_srp.c */; };
+		3CC8333918A5986A00CB9E6A /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC8333818A5986A00CB9E6A /* libcrypto.dylib */; };
+		3CC8333B18A5987A00CB9E6A /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CC8333A18A5987A00CB9E6A /* libssl.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +29,15 @@
 
 /* Begin PBXFileReference section */
 		3CC8332218A5979800CB9E6A /* test_srp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_srp; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CC8332518A5979800CB9E6A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		3CC8332718A5979800CB9E6A /* test_srp.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = test_srp.1; sourceTree = "<group>"; };
+		3CC8332F18A597D100CB9E6A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3CC8333018A597D100CB9E6A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		3CC8333118A597D100CB9E6A /* srp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = srp.c; sourceTree = "<group>"; };
+		3CC8333218A597D100CB9E6A /* srp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srp.h; sourceTree = "<group>"; };
+		3CC8333318A597D100CB9E6A /* test_srp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = test_srp.c; sourceTree = "<group>"; };
+		3CC8333418A597D100CB9E6A /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
+		3CC8333818A5986A00CB9E6A /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		3CC8333A18A5987A00CB9E6A /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC8333B18A5987A00CB9E6A /* libssl.dylib in Frameworks */,
+				3CC8333918A5986A00CB9E6A /* libcrypto.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +56,8 @@
 		3CC8331918A5979800CB9E6A = {
 			isa = PBXGroup;
 			children = (
+				3CC8333A18A5987A00CB9E6A /* libssl.dylib */,
+				3CC8333818A5986A00CB9E6A /* libcrypto.dylib */,
 				3CC8332418A5979800CB9E6A /* test_srp */,
 				3CC8332318A5979800CB9E6A /* Products */,
 			);
@@ -60,7 +74,12 @@
 		3CC8332418A5979800CB9E6A /* test_srp */ = {
 			isa = PBXGroup;
 			children = (
-				3CC8332518A5979800CB9E6A /* main.c */,
+				3CC8332F18A597D100CB9E6A /* LICENSE */,
+				3CC8333018A597D100CB9E6A /* README.txt */,
+				3CC8333118A597D100CB9E6A /* srp.c */,
+				3CC8333218A597D100CB9E6A /* srp.h */,
+				3CC8333318A597D100CB9E6A /* test_srp.c */,
+				3CC8333418A597D100CB9E6A /* TODO */,
 				3CC8332718A5979800CB9E6A /* test_srp.1 */,
 			);
 			path = test_srp;
@@ -117,7 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC8332618A5979800CB9E6A /* main.c in Sources */,
+				3CC8333618A597D100CB9E6A /* srp.c in Sources */,
+				3CC8333718A597D100CB9E6A /* test_srp.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
